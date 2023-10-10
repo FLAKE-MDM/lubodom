@@ -77,6 +77,19 @@
         }
     }
 
+    &_transparent-secondary{
+        background: none;
+        border-color: $secondary;
+        color: $secondary;
+
+        @include bp(hv){
+            &:hover{
+                background: $secondary;
+                border-color: $secondary;
+            }
+        }
+    }
+
     // &_size{
     //     &-xs{
     //         padding: 0.2rem 1.6rem;

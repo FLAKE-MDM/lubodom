@@ -154,6 +154,57 @@ new Swiper(".virtues-slider", {
   },
 });
 
+new Swiper(".team-slider", {
+  spaceBetween: 35,
+  loop: true,
+  slidesPerView: 1,
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.team-next',
+    prevEl: '.team-prev',
+  },
+});
+
+new Swiper(".review-slider", {
+  spaceBetween: 35,
+  slidesPerView: 1,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.review-next',
+    prevEl: '.review-prev',
+  },
+});
+
+Fancybox.bind("[data-fancybox]", {});
+
+
+
+
 // new Swiper(".preview-slider", {
 //   slidesPerView: 1,
 //   loop: true,

@@ -34,6 +34,10 @@
   &-grid{
     display: grid;
     grid-gap: 3.5rem;
+
+    &_md{
+      grid-gap: 1.7rem;
+    }
   }
 
   &-md{
@@ -142,6 +146,10 @@
 .grid{
   &-2{
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  &-3{
+    grid-template-columns: repeat(3, 1fr);
   }
 
   &-6{
@@ -262,10 +270,12 @@
   }
 
   &-lg{
-    margin-bottom: 6.5rem;
+    margin-bottom: 6.2rem;
   }
 
-  &-xl{}
+  &-xl{
+    margin-bottom: 7.5rem;
+  }
 }
 
 .w-100{
