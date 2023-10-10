@@ -178,15 +178,21 @@
     }
   }
 
+  &-xl-3{
+    @include bp(xl-up){
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   &-xl-4{
     @include bp(xl-up){
       grid-template-columns: repeat(4, 1fr);
     }
   }
 
-  &-xl-3{
+  &-xl-5{
     @include bp(xl-up){
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
   }
 

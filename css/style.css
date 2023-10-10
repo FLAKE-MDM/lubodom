@@ -749,13 +749,18 @@ p {
   }
 }
 @media only screen and (min-width: 1200px) {
+  .grid-xl-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 1200px) {
   .grid-xl-4 {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .grid-xl-3 {
-    grid-template-columns: repeat(3, 1fr);
+  .grid-xl-5 {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 1600px) {
@@ -1773,4 +1778,8 @@ body.overflow-none {
 }
 .embed-responsive_lg:before {
   padding-top: 43.7%;
+}
+
+.services-section {
+  padding: 7.1rem 0 7.5rem;
 }
