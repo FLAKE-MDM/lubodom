@@ -1,0 +1,545 @@
+// preview
+.preview-section{
+  background: $secondary url(../img/preview_bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  margin-bottom: 6.4rem;
+
+  &__text{
+    width: 55%;
+    margin: 13.6rem 0 8.7rem;
+  }
+
+  &__title{
+    text-transform: uppercase;
+    font: 400 5.6rem/7.5rem 'Intro', Arial, sans-serif;
+    letter-spacing: 0.11rem;
+    margin: 0 -0.2rem 1.4rem;
+  }
+
+  p{
+    margin: 0 -0.2rem 3.5rem;
+  }
+
+  &__info{
+    max-width: 66rem;
+    margin-bottom: -6.4rem;
+    position: relative;
+  }
+}
+
+.info-block{
+  padding: 1.6rem 0 2.4rem 5rem;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.10);
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    min-width: 24%;
+  }
+
+  &__item+&__item{
+    padding-left: 7.5rem;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background: #859030;
+      width: 0.1rem;
+      height: 6.4rem;
+      margin: auto 0;
+      left: 2.5rem;
+    }
+  }
+
+  &__num{
+    font-size: 3.4rem;
+  }
+}
+
+// project
+.project{
+  &-item{
+    color: #171717;
+
+    &__image{
+      position: relative;
+    }
+
+    &__info{
+      flex-wrap: wrap;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      padding: 2.5rem;
+      align-items: flex-start;
+      z-index: 2;
+
+      &-item{
+        color: #fff;
+        border-radius: 1.2rem;
+        background: rgba(0, 0, 0, 0.50);
+        margin: 0 1rem 1rem 0;
+        padding: 0.45rem 0.75rem;
+        line-height: normal;
+
+        sup{
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    &__name{
+      margin: 2.2rem 2.5rem;
+    }
+  }
+}
+
+.tab-nav{
+  &__item{
+    margin-left: 2rem;
+  }
+
+  &__link{
+    color: $secondary;
+    border-color: $secondary;
+
+    &.active{
+      color: #fff;
+      background: $secondary;
+    }
+
+    @include bp(hv){
+      &:hover{
+        color: #fff;
+        background: $secondary;
+      }
+    }
+  }
+}
+
+// payments
+.payment{
+  &-section{
+    padding: 7.1rem 0;
+  }
+
+  &-item {
+    background: #fff;
+    border-radius: 2.4rem;
+    padding: 2.5rem;
+    margin-top: 0.1rem;
+
+    &__header {
+      margin-bottom: 3.5rem;
+
+      &_md{
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    &__title {
+      font-size: 1.8rem;
+      line-height: 135%;
+      margin-top: 0.2rem;
+    }
+
+    &__icon {
+      flex-shrink: 0;
+      width: 6.5rem;
+      height: 6.5rem;
+      border-radius: 50%;
+      border: 1px solid $primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0.1rem;
+    }
+  }
+}
+
+
+.mortgage{
+  &-row{
+    margin: 0 -0.5rem;
+    grid-gap: 1.5rem;
+  }
+
+  &-item {
+    border-radius: 2.4rem;
+    padding: 1.8rem 1.8rem 1.9rem 1.6rem;
+    border: 1px solid $secondary;
+    font-size: 1rem;
+    line-height: 100%;
+  
+    &__icon {
+      flex-shrink: 0;
+      margin-right: 0.8rem;
+
+      &_margin{
+        margin: 0.2rem 0.9rem 0 -0.5rem;
+      }
+    }
+  
+    &__text {
+      padding-top: 0.1rem;
+      font-weight: 100;
+    }
+  
+    &__number {
+      font-size: 1.8rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+// discounts
+.discounts{
+  &-slider{
+    padding-bottom: 0.1rem;
+
+    .swiper-slide{
+      height: auto;
+      display: flex;
+      width: 26.5rem;
+
+      &.large{
+        width: 56.5rem;
+      }
+    }
+  }
+}
+
+.box-item {
+  padding: 3.8rem 4rem 4rem;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__content {
+    width: 65%;
+
+    .btn{
+      margin-left: -0.4rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.4rem;
+    letter-spacing: 0.05rem;
+    line-height: 145%;
+
+    &_margin{
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    &_margin{
+      margin-right: 3.2rem;
+    }
+  }
+
+  &__group{
+    gap: 2.5rem;
+
+    &-item{
+      border-radius: 2.4rem;
+      border: 1px solid $primary;
+      padding: 1.4rem 2.4rem 1.1rem 2.3rem;
+      line-height: 100%;
+
+      .title{
+        display: inline-block;
+        margin: -0.2rem 0.3rem 0 0;
+      }
+    }
+  }
+
+  .btn{
+    margin-top: auto;
+  }
+
+  p{
+    margin-bottom: 2.8rem;
+  }
+}
+
+// callback
+.callback-block {
+  padding: 3rem 4rem 2rem;
+  display: flex;
+
+  &_text {
+    flex-shrink: 0;
+    margin-right: 9%;
+  }
+
+  &__form {
+    flex-grow: 1;
+  }
+}
+
+.callback-form{
+  gap: 1.6rem;
+  margin-top: 1.4rem;
+
+  .btn{
+    padding: 1.45rem 2.5rem;
+  }
+}
+
+// advantages
+.advantages{
+  &-section{
+    background: $secondary url(../img/advantages_bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    padding: 7.1rem 0 7.5rem;
+
+    &__content {
+      grid-template-columns: 31.5% auto;
+    }
+
+    &__title{
+      margin-bottom: auto;
+    }
+  
+    &__col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text{
+      max-width: 92%;
+      line-height: 140%;
+    }
+  
+    &__row {
+      padding-top: 0.4rem;
+    }
+  }
+
+  &-item {
+    padding: 1.5rem 2.5rem 1.5rem 1.7rem;
+    border-radius: 2.4rem;
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(25px);
+    min-height: 12rem;
+
+		&__num {
+      flex-shrink: 0;
+      margin: 0.7rem 2.1rem 0 0;
+		}
+
+		&__text {
+		}
+  }
+}
+
+// virtues
+.virtues{
+  &-section{
+    margin-top: -0.2rem;
+  }
+
+  &-slider{
+    margin-top: -0.1rem;
+  }
+
+  &-item {
+    position: relative;
+    z-index: 1;
+    height: 37rem;
+    padding: 3rem 3rem 2.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &:before{
+      content: '';
+      position: absolute;
+      display: block;
+      top: 5.8rem;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 0rem 0rem 2.6rem 2.6rem;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+      z-index: -1;
+    }
+
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+    }
+
+    p{
+      margin: 0.4rem 0 0.7rem;
+      line-height: normal;
+    }
+  }
+}
+
+// included
+.included{
+  &-section{
+    padding: 7.1rem 0 7.5rem;
+
+    &__col{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-gap: 3.5rem;
+
+      .box-item__title{
+        margin-bottom: 1.9rem;
+      }
+
+      .box-item_last{
+        padding-bottom: 2.7rem;
+
+        .box-item__title{
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+.btn-list{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__item{
+    border-radius: 10rem;
+    padding: 0.95rem 2.5rem 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    border: 1px solid $primary;
+
+    &:before{
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      border: 1px solid $primary;
+      margin-right: 1.1rem;
+    }
+  }
+}
+
+// form-section
+.form-section{
+  position: relative;
+  background: $secondary url(../img/form_bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  padding: 4.2rem 4rem 4.6rem;
+  overflow: visible;
+  margin-bottom: 7.1rem;
+
+  &::before{
+    content: '';
+    border-radius: 2.6rem;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: linear-gradient(95deg, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.00) 133.08%);
+  }
+
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 2.6rem;
+    background: linear-gradient(271deg, rgba(122, 137, 11, 0.80) 0%, rgba(48, 56, 79, 0.80) 100%);
+    filter: blur(35px);
+    z-index: -2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 9rem;
+  }
+
+  &__image{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    border-bottom-right-radius: 2.6rem;
+    overflow: hidden;
+  }
+
+  &__content{
+    position: relative;
+    z-index: 3;
+    width: 61.8%;
+  }
+
+  &__grid{
+    grid-gap: 2rem;
+  }
+
+  &__footer{
+    flex-direction: row-reverse;
+  }
+
+  &__text{
+    text-align: right;
+    margin-right: 2.3rem;
+  }
+
+  .btn{
+    padding: 1.45rem 2.5rem;
+  }
+}
+
+// blog
+.video-block{
+  &__title{
+    margin: 1.3rem 2rem 0;
+  }
+}
+
+.embed-responsive{
+  position: relative;
+
+  &:before{
+    content: '';
+    display: block;
+    padding-top: 57.7%;
+  }
+
+  &-item{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  &_lg{
+    &:before{
+      padding-top: 43.7%;
+    }
+  }
+}

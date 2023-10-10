@@ -1,0 +1,132 @@
+a{
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    color: $primary;
+
+    @include bp(hv){
+        &:hover{
+            color: darken($color: $primary, $amount: 10);
+        }
+    }
+
+    &.text_inversion{
+        @include bp(hv){
+            &:hover{
+                color: $primary
+            }
+        }
+    }
+}
+// .link_underline{
+//     display: inline-block;
+//     padding-bottom: 0.8rem;
+//     border-bottom: 1px solid $primary;
+//     &:hover{
+//         text-decoration: none!important;
+//         border-color: transparent;
+//     }
+// }
+p{
+    margin-bottom: 1.6rem;
+}
+.title{
+    font-weight: bold;
+    line-height: normal;
+    font-size: 3.6rem;
+
+    &_size{
+        &-xs{
+            font-size: 2.2rem;
+        }
+
+        &-sm{
+            font-size: 2.4rem;
+        }
+
+        &-md{
+            font-size: 2.6rem;
+        }
+
+        &-lg{
+            font-size: 3.2rem;
+        }
+
+        &-xl{
+            
+        }
+    }
+
+}
+.text{
+    &_upper{
+        text-transform: uppercase;
+    }
+
+    &_styling{
+        font-family: 'Intro', sans-serif;
+    }
+
+    // size
+    &_size{
+        &-xs{
+            font-size: 1.2rem;
+            line-height: 100%;
+        }
+        &-sm{
+            font-size: 1.4rem;
+            line-height: 135%
+        }
+        &-md{
+            font-size: 1.8rem;
+            line-height: normal;
+        }
+        &-lg{
+            
+        }
+        &-xl{
+            
+        }
+    }
+    // colors
+    &_primary{
+        color: $primary;
+    }
+
+    &_secondary{
+        color: $secondary;
+    }
+
+    &_inversion{
+        color: #fff;
+    }
+
+    // weight
+    &_thin{
+        font-weight: 100;
+    }
+    &_normal{
+        font-weight: 400;
+    }
+    &_mediumbold{
+        font-weight: 500;
+    }
+    &_bold{
+        font-weight: 700;
+    }
+    // alignment
+    &_center{
+        text-align: center;
+        &_sm{
+            @include bp(sm){
+                text-align: center;
+            }
+        }
+    }
+    &_left{
+        text-align: left!important;
+    }
+    &_right{
+        text-align: right!important;
+    }
+}
+

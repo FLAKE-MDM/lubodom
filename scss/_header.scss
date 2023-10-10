@@ -1,0 +1,95 @@
+.header{
+    padding: 1.8rem 0 2rem;
+    background: #23262D;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
+
+    .btn{
+        padding: 1.45rem 1.95rem;
+    }
+}
+
+.logo{
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+
+    @include bp(hv){
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}
+
+.phone{
+    margin-top: 0.1rem;
+}
+
+.nav{
+    margin: 0.1rem 1.5% 0;
+
+    &-list{
+        &__item{
+            margin: 0 3.3rem;
+
+            @include bp(lg){
+
+            }
+
+            @include bp(md){
+                margin-right: 0;
+                padding: 0;
+            }
+        }
+        &__link{
+            font-size: 1.4rem;
+            line-height: normal;
+            display: inline-flex;
+            color: #fff;
+            &.active{
+                color: $primary;
+            }
+
+            @include bp(hv){
+                &:hover{
+                    color: $primary;
+                }
+            }
+
+            @include bp(md){
+               
+            }
+        }
+    }
+}
+.btn-menu{
+    display: block;
+    border: none;
+    align-self: center;
+    background: none;
+    flex-shrink: 0;
+    &__item{
+        display: block;
+        width: 2rem;
+        height: 0.2rem;
+        border-top-style: 5px;
+        background: #fff;
+        transition: all 0.3s ease-out;
+    }
+    &__item+&__item{
+        margin-top: 0.5rem;
+    }
+    &:hover{
+        .btn-menu__item{
+
+        }
+    }
+}
+.social-list{
+    &__item{
+        margin-left: 1.2rem;
+        width: 3.1rem;
+        height: 3rem;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}
