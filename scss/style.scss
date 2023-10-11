@@ -20,20 +20,10 @@ body{
     color: #000;
     background: #fff;
 
-    @include bp(md){
-
-    }
-    @include bp(sm){
-
-    }
-
     &.overflow-none{
         overflow: hidden;
         @include bp(xl-up){
             padding-right: 1.7rem;
-            .header{
-                margin-right: 1.7rem;
-            }
         }
     }
 }

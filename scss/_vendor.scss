@@ -21,83 +21,68 @@
 .fade {
   transition: opacity .15s linear;
 }
+
 .modal{
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1055;
-  display: none;
+  transform: translateY(-100%);
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   outline: 0;
+  background: rgba($primary, 0.3);
+  backdrop-filter: blur(2px);
+
+  &.show{
+    transform: none;
+  }
   &__close{
     position: absolute;
     top: 2.4rem;
     right: 2.4rem;
     border: none;
-    transition: all 0.3s ease-out;
     background: none;
-    &:hover{opacity: 0.5;}
+    border-radius: 50%;
+
     @include bp(sm){
-      &.icon-close{
-        width: 1.6rem;
-        height: 1.6rem;
-        background-image: url(../img/icons/close-black.svg);
-        top: 1.6rem;
-        right: 2.3rem;
-      }
+      right: 1rem;
+      top: 1.4rem;
     }
   }
+  &__content{
+    flex-grow: 1;
+    pointer-events: auto;
+    background: $secondary;
+    border-radius: 2.6rem;
+    color: #fff;
+    padding: 4rem;
+  }
+
+  &__header{
+    margin-bottom: 3rem;
+  }
 }
+
 .modal-dialog {
   position: relative;
-  pointer-events: none;
-  @include bp(md-up){
-    width: 57.6rem;
+  pointer-events: auto;
+  margin: 3rem 1rem;
+
+  @include bp(sm-up){
+    width: 50rem;
     margin: 5rem auto;
   }
-  @include bp(lg-up){
-    width: 82rem;
-    margin: 10rem auto;
-  }
 }
-.modal.fade .modal-dialog {
+.modal .modal-dialog {
   transition: transform .3s ease-out;
   transform: translate(0,-50px);
 }
 .modal.show .modal-dialog {
   transform: none;
 }
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1050;
-  width: 100vw;
-  height: 100vh;
-  background: #000;
-}
-.modal-backdrop.fade {
-  opacity: 0;
-}
-.modal-backdrop.show {
-  opacity: 0.3;
-}
-.modal-content{
-  flex-grow: 1;
-  pointer-events: auto;
-  background: #fff;
-  padding: 2rem;
-  @include bp(md){
-
-  }
-  @include bp(sm){
-
-  }
-}
-
 
 // dropdown
 .dropdown{

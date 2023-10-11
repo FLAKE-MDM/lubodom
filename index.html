@@ -29,7 +29,7 @@
                             <span class="d-none d-md-block">+7 989 834-40-85</span>
                             <span class="d-md-none icon icon-phone"></span>
                         </a>
-                        <a href="#" class="btn btn_primary d-none d-md-inline-flex">Заказать звонок</a>
+                        <a href="#callback" class="btn btn_primary d-none d-md-inline-flex modal-open">Заказать звонок</a>
                     </div>
                     <a href="#nav" class="btn-menu d-xl-none collapse-link">
                         <span class="btn-menu__item"></span>
@@ -1135,8 +1135,27 @@
             </div>
         </footer>
         <!-- /footer -->
-
     </div>
+
+    <!-- callback -->
+    <div class="modal fade" id="callback">
+        <div class="modal-dialog">
+            <div class="modal__content">
+                <button type="button" class="icon icon-close modal-close modal__close"></button>
+                <div class="modal__header text_center">
+                    <div class="title mb-xs">Перезвоните мне</div>
+                    <p class="text_thin">Мы сможем помочь вам и назначить встречу</p>
+                </div>
+                <div class="form-group_margin">
+                    <input type="text" class="form-control" placeholder="Ваш номер телефона">
+                </div>
+                <div class="form-group text_center">
+                    <button class="btn btn_transparent-primary">Перезвоните мне</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /callback -->
 
 
 
