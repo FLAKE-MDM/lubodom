@@ -186,6 +186,10 @@
     justify-content: center;
     z-index: 5;
 
+    @include bp(xl){
+        right: 2rem;
+    }
+
     @include bp(sm){
         right: 2rem;
         bottom: 4.2rem;

@@ -2684,6 +2684,11 @@ body.overflow-none {
   justify-content: center;
   z-index: 5;
 }
+@media only screen and (max-width: 1399px) {
+  .up-link {
+    right: 2rem;
+  }
+}
 @media only screen and (max-width: 767px) {
   .up-link {
     right: 2rem;
