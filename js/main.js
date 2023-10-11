@@ -135,30 +135,33 @@ new Swiper(".virtues-slider", {
   },
 });
 
-new Swiper(".team-slider", {
-  spaceBetween: 35,
-  loop: true,
-  slidesPerView: 1,
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
+document.addEventListener("DOMContentLoaded", function () {
+  let teamSlider = new Swiper(".team-slider", {
+    spaceBetween: 35,
+    loop: true,
+    slidesPerView: 1,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
     },
-    992: {
-      slidesPerView: 3,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
-    1200: {
-      slidesPerView: 4,
-    },
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.team-next',
-    prevEl: '.team-prev',
-  },
-});
+    navigation: {
+      nextEl: '.team-next',
+      prevEl: '.team-prev',
+    }
+  });
+})
+
 
 new Swiper(".review-slider", {
   spaceBetween: 35,
@@ -171,6 +174,7 @@ new Swiper(".review-slider", {
       slidesPerView: 3,
     },
   },
+
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -180,6 +184,7 @@ new Swiper(".review-slider", {
     prevEl: '.review-prev',
   },
 });
+
 
 Fancybox.bind("[data-fancybox]", {});
 

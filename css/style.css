@@ -924,6 +924,7 @@ body.overflow-none {
 }
 .swiper-arrows {
   gap: 1.5rem;
+  z-index: 50;
 }
 .swiper-button-next, .swiper-button-prev {
   position: static;
@@ -951,15 +952,18 @@ body.overflow-none {
     border-color: #F1F2F6;
   }
 }
-.swiper-button_absolute {
-  position: absolute;
-  top: 30%;
-}
-.swiper-button_absolute.swiper-button-prev {
-  left: 0;
-}
-.swiper-button_absolute.swiper-button-next {
-  right: 0;
+@media only screen and (max-width: 767px) {
+  .swiper-button_absolute {
+    position: absolute;
+    top: 19.3rem;
+    z-index: 50;
+  }
+  .swiper-button_absolute.swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button_absolute.swiper-button-next {
+    right: 0;
+  }
 }
 .swiper-pagination {
   position: static;

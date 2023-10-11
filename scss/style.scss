@@ -112,6 +112,7 @@ body{
 
     &-arrows{
         gap: 1.5rem;
+        z-index: 50;
     }
 
     &-button-next, &-button-prev{
@@ -144,15 +145,18 @@ body{
     }
 
     &-button_absolute{
-        position: absolute;
-        top: 30%;
-        
-        &.swiper-button-prev{
-            left: 0;
-        }
+        @include bp(sm){
+            position: absolute;
+            top: 19.3rem;
+            z-index: 50;
 
-        &.swiper-button-next{
-            right: 0;
+            &.swiper-button-prev{
+                left: 0;
+            }
+
+            &.swiper-button-next{
+                right: 0;
+            }
         }
     }
 
@@ -180,7 +184,7 @@ body{
                 opacity: 0;
                 transition: all 0.3s ease-out;
             }
-            
+
             &-active{
                 background: $primary;
 
