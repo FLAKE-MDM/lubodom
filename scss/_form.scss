@@ -204,6 +204,12 @@
 // fake-select
 .fake-select{
     position: relative;
+    &.open{
+        .dropdown-menu{
+            display: block;
+        }
+    }
+
     &__info{
         display: inline-block;
         margin-left: 1.2rem;
@@ -212,31 +218,25 @@
         display: block;
         font-size: 1.4rem;
         line-height: 2rem;
-        &:not(:last-child){
-            margin-bottom: 2rem;
+        padding: 1rem 2rem;
+        &.fake-select__item_active{
+            background: rgba($primary, 0.3);
         }
-        &:hover, &.fake-select__item_active{
 
-        }
-    }
-    &__link{
-        white-space: nowrap;
-        &.show{
-        }
-        &.active{
-
-        }
-        &::after, &::before{
-            @include bp(md-up){
-                right: 1.9rem;
+        @include bp(hv){
+            &:hover{
+                background: rgba($primary, 0.3);
             }
         }
     }
-    &__dropdown{
-        padding: 2rem;
-        margin-top: 0.4rem;
-        background: #FFFFFF;
-        box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.05);
-        border-radius: 5px;
-    }
+
+    // &__link{
+    //     white-space: nowrap;
+
+    //     &::after, &::before{
+    //         @include bp(md-up){
+    //             right: 1.9rem;
+    //         }
+    //     }
+    // }
 }

@@ -88,6 +88,30 @@
     }
   }
 
+  &-xl{
+    @include bp(xl-up){
+      &-none{
+        display: none!important;
+      }
+      &-block{
+        display: block!important;
+      }
+      &-inline-flex{
+        display: inline-flex!important;
+      }
+      &-inline{
+        display: inline-block!important;
+      }
+      &-flex{
+        display: flex!important;
+      }
+      &-grid{
+        display: grid!important;
+        grid-gap: 3.5rem;
+      }
+    }
+  }
+
   &-xxl{
     @include bp(xxl-up){
       &-none{
@@ -271,6 +295,10 @@
 
   &-lg{
     margin-bottom: 6.2rem;
+
+    @include bp(sm){
+      margin-bottom: 4.3rem;
+    }
   }
 
   &-xl{

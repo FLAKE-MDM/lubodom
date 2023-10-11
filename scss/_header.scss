@@ -2,6 +2,11 @@
     padding: 1.8rem 0 2rem;
     background: #23262D;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
+    position: relative;
+
+    @include bp(sm){
+        padding: 1.1rem 0 1.2rem;
+    }
 
     .btn{
         padding: 1.45rem 1.95rem;
@@ -17,21 +22,52 @@
             opacity: 0.7;
         }
     }
+
+    @include bp(sm){
+        margin-top: -0.6rem;
+    }
 }
 
 .phone{
     margin-top: 0.1rem;
+
+    @include bp(sm){
+        width: 5.6rem;
+        height: 5.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1.6rem;
+        background: #30343F;
+    }
 }
 
 .nav{
     margin: 0.1rem 1.5% 0;
+
+    @include bp(xl-up){
+        display: block!important;
+    }
+
+    @include bp(lg){
+      position: absolute;
+      left: 0;
+      right: 0;
+      background: #23262D;
+      top: 100%;
+      margin: 0;
+
+      &.show{
+        display: block;
+      }
+    }
 
     &-list{
         &__item{
             margin: 0 3.3rem;
 
             @include bp(lg){
-
+                margin: 0;
             }
 
             @include bp(md){
@@ -44,6 +80,7 @@
             line-height: normal;
             display: inline-flex;
             color: #fff;
+
             &.active{
                 color: $primary;
             }
@@ -54,42 +91,46 @@
                 }
             }
 
-            @include bp(md){
-               
+            @include bp(lg){
+                padding: 1.5rem 2rem;
+                display: flex;
             }
         }
     }
 }
 .btn-menu{
-    display: block;
     border: none;
     align-self: center;
     background: none;
     flex-shrink: 0;
+    margin-left: 2rem;
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $primary;
+
+    @include bp(sm){
+        margin-left: 0;
+    }
+
     &__item{
         display: block;
-        width: 2rem;
-        height: 0.2rem;
-        border-top-style: 5px;
+        width: 1.7rem;
+        height: 0.3rem;
+        border-radius: 1rem;
         background: #fff;
         transition: all 0.3s ease-out;
     }
     &__item+&__item{
-        margin-top: 0.5rem;
+        margin-top: 0.25rem;
     }
     &:hover{
         .btn-menu__item{
 
-        }
-    }
-}
-.social-list{
-    &__item{
-        margin-left: 1.2rem;
-        width: 3.1rem;
-        height: 3rem;
-        &:hover{
-            opacity: 0.7;
         }
     }
 }

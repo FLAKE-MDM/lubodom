@@ -17,15 +17,17 @@ a{
         }
     }
 }
-// .link_underline{
-//     display: inline-block;
-//     padding-bottom: 0.8rem;
-//     border-bottom: 1px solid $primary;
-//     &:hover{
-//         text-decoration: none!important;
-//         border-color: transparent;
-//     }
-// }
+.link_underline{
+    display: inline-block;
+    border-bottom: 1px dashed $primary;
+
+    @include bp(hv){
+        &:hover{
+            text-decoration: none!important;
+            border-color: transparent;
+        }
+    }
+}
 p{
     margin-bottom: 1.6rem;
 }
@@ -49,10 +51,6 @@ p{
 
         &-lg{
             font-size: 3.2rem;
-        }
-
-        &-xl{
-            
         }
     }
 
@@ -79,12 +77,6 @@ p{
         &-md{
             font-size: 1.8rem;
             line-height: normal;
-        }
-        &-lg{
-            
-        }
-        &-xl{
-            
         }
     }
     // colors

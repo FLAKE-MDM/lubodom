@@ -90,23 +90,21 @@
         }
     }
 
-    // &_size{
-    //     &-xs{
-    //         padding: 0.2rem 1.6rem;
-    //         border-radius: 30px;
-    //         .btn__icon{
-    //             margin: -0.2rem -1.4rem 0 11px;
-    //         }
-    //     }
-    //     &-sm{
-    //         padding: 0.9rem 1.6rem;
-    //     }
-    //     &-md{
-    //         @include bp(md-up){
-    //             min-width: 25.8rem;
-    //         }
-    //     }
-    // }
+    &_size{
+        // &-xs{
+        //     padding: 0.2rem 1.6rem;
+        //     border-radius: 30px;
+        //     .btn__icon{
+        //         margin: -0.2rem -1.4rem 0 11px;
+        //     }
+        // }
+        // &-sm{
+        //     padding: 0.9rem 1.6rem;
+        // }
+        &-md{
+            padding: 1.45rem 5.6rem;
+        }
+    }
 }
 
 

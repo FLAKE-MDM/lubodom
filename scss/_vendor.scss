@@ -105,25 +105,15 @@
 }
 .dropdown-menu{
   position: absolute;
+  top: 100%;
   z-index: 1000;
   display: none;
   min-width: 100%;
-  margin: 0.8rem 0 0;
+  margin: 0;
   background: #FFFFFF;
   box-shadow: 0px 12px 30px rgba(45, 45, 45, 0.18);
   border-radius: 6px;
-  &_right{
-    inset: 100% 0 auto auto!important;
-  }
-  &_left{
-    inset: 100% auto auto 0!important;
-  }
-  &_nav{
-    box-shadow: 0px 3px 10px rgba(45, 45, 45, 0.18);
-    min-width: 28.6rem;
-    margin: 0!important;
-    transform: none!important;
-  }
+
   &__link{
     font-size: 1.4rem;
     line-height: 2.8rem;
@@ -146,39 +136,37 @@
   align-items: center;
   overflow: 0 2rem 0 0;
   position: relative;
-  padding-right: 2.5rem;
-  &::after, &::before {
+  padding-right: 1.8rem;
+
+  &::before {
     content: "";
     display: inline-block;
     width: 1rem;
     height: 0.6rem;
-    top: 0.1rem;
-    right: 1.5rem;
+    top: 0.2rem;
+    right: 0;
     background: url(../img/icons/caret.svg) no-repeat;
     background-size: contain;
     transition: all 0.3s ease-out;
     position: absolute;
     bottom: 0;
     margin: auto;
-  }
-  &::before{
-    background: url(../img/icons/caret-primary.svg) no-repeat;
-    background-size: contain;
-    opacity: 0;
-  }
-  &:hover{
-    &::after{
-      opacity: 0;
-    }
-    &::before{
-      opacity: 1;
+
+    @include bp(sm){
+      top: 0.1rem;
     }
   }
+
   &.show{
-    &::after, &::before{
+    &::before{
       transform: rotate(180deg);
     }
   }
+
+  .open &::before{
+    transform: rotate(180deg);
+  }
+
   .btn__icon-absolute-left{
     left: 1.1rem;
   }
